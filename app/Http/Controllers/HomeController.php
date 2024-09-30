@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Banner;
 use Illuminate\View\View;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
     public function index(): View{
-        return view('home');
+        $banners = Banner::all();
+        return view('home', ['banners'=>$banners]);
     }
 }
