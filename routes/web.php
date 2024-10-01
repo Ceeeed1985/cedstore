@@ -18,7 +18,7 @@ use App\Http\Controllers\ProfileController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
-// Route::get('/load', [ProductController::class, 'load'])->name('load');
+Route::get('/load', [ProductController::class, 'load'])->name('load');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
